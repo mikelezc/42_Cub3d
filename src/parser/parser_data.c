@@ -1,0 +1,77 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   parse_map.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ampjimen <ampjimen@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/03 18:00:31 by ampjimen          #+#    #+#             */
+/*   Updated: 2024/07/05 21:21:07 by ampjimen         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "cub3d.h"
+
+void	cb_init_parse_data(t_parse *data)
+{
+	data->raw_map = NULL;
+	data->no = ft_strdup("X");
+	data->so = ft_strdup("X");
+	data->we = ft_strdup("X");
+	data->ea = ft_strdup("X");
+	data->f_color[0] = -1;
+	data->f_color[1] = -1;
+	data->f_color[2] = -1;
+	data->c_color[0] = -1;
+	data->c_color[1] = -1;
+	data->c_color[2] = -1;
+	data->reading_pos = 0;
+	data->map_length = 0;
+	data->line_size = 0;
+	data->error = 0;
+}
+
+int	cb_check_argv_cub(char *argv, t_parse *data, t_game *game)
+{
+	int	len;
+
+	len = ft_strlen(argv);
+	if (len > 4 && ft_strcmp(argv + len - 4, ".cub") == 0)
+	{
+		if (cb_check_read_map(argv, data, game) == false)
+			return (false);
+	}
+	else
+	{
+		printf("Error:\nInvalid file format.\n");
+		cb_input_help();
+	}
+	return (true);
+}
+
+void	cb_print_2d_array(char **array_2d)
+{
+	int	i;
+	int	k;
+
+	if (array_2d == NULL)
+		return ;
+	i = 0;
+	while (array_2d[i] != NULL)
+	{
+		k = 0;
+		while (array_2d[i][k] != '\0')
+			ft_putchar_fd(array_2d[i][k++], 1);
+		write(1, "\n", 2);
+		i++;
+	}
+}
+
+t_parse	cb_parse_file(char *argv, t_game *game)
+{
+	t_parse	data;
+
+	cb_init_parse_data(&data);
+	cb_check_argv_cub(argv, &data, game);
+	return (data);
+}
