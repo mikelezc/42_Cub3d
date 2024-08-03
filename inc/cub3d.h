@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mlezcano <mlezcano@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ampjimen <ampjimen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/03 09:14:30 by mlezcano          #+#    #+#             */
-/*   Updated: 2024/07/29 17:14:26 by mlezcano         ###   ########.fr       */
+/*   Updated: 2024/08/03 11:33:48 by ampjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ void	cb_init_vars(t_game *game);
 /* parser_data.c */
 void	cb_init_parse_data(t_parse *data);
 int		cb_check_argv_cub(char *argv, t_parse *data, t_game *game);
-void	cb_print_2d_array(char **array_2d);
 t_parse	cb_parse_file(char *argv, t_game *game);
 
 /* check_enclosure.c */

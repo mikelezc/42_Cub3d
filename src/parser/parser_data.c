@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   parse_map.c                                        :+:      :+:    :+:   */
+/*   parser_data.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ampjimen <ampjimen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/03 18:00:31 by ampjimen          #+#    #+#             */
-/*   Updated: 2024/07/05 21:21:07 by ampjimen         ###   ########.fr       */
+/*   Updated: 2024/08/03 11:34:06 by ampjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,24 +47,6 @@ int	cb_check_argv_cub(char *argv, t_parse *data, t_game *game)
 		cb_input_help();
 	}
 	return (true);
-}
-
-void	cb_print_2d_array(char **array_2d)
-{
-	int	i;
-	int	k;
-
-	if (array_2d == NULL)
-		return ;
-	i = 0;
-	while (array_2d[i] != NULL)
-	{
-		k = 0;
-		while (array_2d[i][k] != '\0')
-			ft_putchar_fd(array_2d[i][k++], 1);
-		write(1, "\n", 2);
-		i++;
-	}
 }
 
 t_parse	cb_parse_file(char *argv, t_game *game)

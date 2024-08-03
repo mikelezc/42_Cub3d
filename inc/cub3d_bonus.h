@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d_bonus.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mlezcano <mlezcano@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ampjimen <ampjimen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 13:45:08 by ampjimen          #+#    #+#             */
-/*   Updated: 2024/07/29 17:15:36 by mlezcano         ###   ########.fr       */
+/*   Updated: 2024/08/03 11:33:59 by ampjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ void	bonus_init_vars(t_game *game);
 /* bonus_parser_data.c */
 void	bonus_init_parse_data(t_parse *data);
 int		bonus_check_argv_cub(char *argv, t_parse *data, t_game *game);
-void	bonus_print_2d_array(char **array_2d);
 t_parse	bonus_parse_file(char *argv, t_game *game);
 
 /* bonus_check_enclusure.c */
