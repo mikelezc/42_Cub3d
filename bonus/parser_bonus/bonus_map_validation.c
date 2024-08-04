@@ -6,7 +6,7 @@
 /*   By: ampjimen <ampjimen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/07 17:54:58 by ampjimen          #+#    #+#             */
-/*   Updated: 2024/07/24 20:33:25 by ampjimen         ###   ########.fr       */
+/*   Updated: 2024/08/04 12:03:00 by ampjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,8 +61,6 @@ void	bonus_length_map(char *line, int fd, char *map_file, t_parse *data)
 	}
 	close(fd);
 	fd = open(map_file, O_RDONLY);
-	if (fd == -1)
-		bonus_error_exit("Error:\nCan not open map file");
 }
 
 int	bonus_check_only_spaces(char *line)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   map_validation.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mlezcano <mlezcano@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ampjimen <ampjimen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/07 17:54:58 by ampjimen          #+#    #+#             */
-/*   Updated: 2024/07/21 07:06:21 by mlezcano         ###   ########.fr       */
+/*   Updated: 2024/08/04 12:01:44 by ampjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,8 +61,6 @@ void	cb_length_map(char *line, int fd, char *map_file, t_parse *data)
 	}
 	close(fd);
 	fd = open(map_file, O_RDONLY);
-	if (fd == -1)
-		cb_error_exit("Error:\nCan not open map file");
 }
 
 int	cb_check_only_spaces(char *line)
