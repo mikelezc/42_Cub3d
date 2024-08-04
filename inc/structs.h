@@ -6,7 +6,7 @@
 /*   By: mlezcano <mlezcano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 02:29:28 by ampjimen          #+#    #+#             */
-/*   Updated: 2024/07/28 18:58:19 by mlezcano         ###   ########.fr       */
+/*   Updated: 2024/08/04 17:50:36 by mlezcano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,8 +49,6 @@ typedef struct s_player
 	double		dir_y;
 	double		plane_x;
 	double		plane_y;
-	float		camera_angle;
-	float		camera_pitch;
 }				t_player;
 
 typedef struct s_keys
@@ -89,9 +87,6 @@ typedef struct s_game
 	int			crack_bg_color;
 	int			**zbuffer;
 	int			**texture;
-	char		**texture_path;
-	int			crack_img_width;
-	int			crack_img_height;
 }				t_game;
 
 //raycasting struct
