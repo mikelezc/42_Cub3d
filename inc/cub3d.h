@@ -6,7 +6,7 @@
 /*   By: mlezcano <mlezcano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/03 09:14:30 by mlezcano          #+#    #+#             */
-/*   Updated: 2024/08/04 17:42:38 by mlezcano         ###   ########.fr       */
+/*   Updated: 2024/08/04 18:13:33 by mlezcano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ bool	cb_check_exec(t_parse *data, t_game *game, int i, char **tmp_map);
 int		cb_validate_and_process_map(t_parse *data, int fd, t_game *game);
 void	cb_length_map(char *line, int fd, char *map_file, t_parse *data);
 int		cb_check_only_spaces(char *line);
-int		cb_validate_map_chars(char *line);
+int		cb_not_valid_map_char(char *line);
 int		cb_check_duplicate_players(char c, char option);
 
 /* update_data.c */

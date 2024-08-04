@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   bonus_map_validation.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ampjimen <ampjimen@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mlezcano <mlezcano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/07 17:54:58 by ampjimen          #+#    #+#             */
-/*   Updated: 2024/08/04 12:03:00 by ampjimen         ###   ########.fr       */
+/*   Updated: 2024/08/04 18:13:33 by mlezcano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	bonus_validate_and_process_map(t_parse *data, int fd, t_game *game)
 	i = 0;
 	while (line != NULL)
 	{
-		if (bonus_validate_map_chars(line))
+		if (bonus_not_valid_map_char(line))
 			return (bonus_free_array((void **)tmp_map), free(line), false);
 		tmp_map[i] = ft_strdup(line);
 		data->raw_map[i++] = bonus_adjust_map_line(line, data);
@@ -106,7 +106,7 @@ int	bonus_check_duplicate_players(char c, char option)
 	return (false);
 }
 
-int	bonus_validate_map_chars(char *line)
+int	bonus_not_valid_map_char(char *line)
 {
 	int		i;
 	char	c;

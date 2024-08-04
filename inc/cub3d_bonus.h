@@ -6,7 +6,7 @@
 /*   By: mlezcano <mlezcano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 13:45:08 by ampjimen          #+#    #+#             */
-/*   Updated: 2024/08/04 17:42:38 by mlezcano         ###   ########.fr       */
+/*   Updated: 2024/08/04 18:13:33 by mlezcano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ bool	bonus_check_exec(t_parse *data, t_game *game, int i, char **tmp_map);
 int		bonus_validate_and_process_map(t_parse *data, int fd, t_game *game);
 void	bonus_length_map(char *line, int fd, char *map_file, t_parse *data);
 int		bonus_check_only_spaces(char *line);
-int		bonus_validate_map_chars(char *line);
+int		bonus_not_valid_map_char(char *line);
 int		bonus_check_duplicate_players(char c, char option);
 
 /* bonus_update_data.c */

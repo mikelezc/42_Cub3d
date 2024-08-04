@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   map_validation.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ampjimen <ampjimen@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mlezcano <mlezcano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/07 17:54:58 by ampjimen          #+#    #+#             */
-/*   Updated: 2024/08/04 12:01:44 by ampjimen         ###   ########.fr       */
+/*   Updated: 2024/08/04 18:13:33 by mlezcano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	cb_validate_and_process_map(t_parse *data, int fd, t_game *game)
 	i = 0;
 	while (line != NULL)
 	{
-		if (cb_validate_map_chars(line))
+		if (cb_not_valid_map_char(line))
 			return (cb_free_array((void **)tmp_map), free(line), false);
 		tmp_map[i] = ft_strdup(line);
 		data->raw_map[i++] = cb_adjust_map_line(line, data);
@@ -77,7 +77,7 @@ int	cb_check_only_spaces(char *line)
 	return (true);
 }
 
-int	cb_validate_map_chars(char *line)
+int	cb_not_valid_map_char(char *line)
 {
 	int		i;
 	char	c;
