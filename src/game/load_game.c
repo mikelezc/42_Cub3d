@@ -6,13 +6,13 @@
 /*   By: mlezcano <mlezcano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/28 19:27:29 by mlezcano          #+#    #+#             */
-/*   Updated: 2024/07/29 17:16:10 by mlezcano         ###   ########.fr       */
+/*   Updated: 2024/08/04 17:42:56 by mlezcano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
 
-void	cb_paint_floor_ceiling(t_game *game, t_parse *data)
+void	cb_get_int_color_fl_cel(t_game *game, t_parse *data)
 {
 	game->map.ceil_color = ((data->c_color[0] & 0xFF) << 16) | \
 	((data->c_color[1] & 0xFF) << 8) | \
@@ -96,5 +96,5 @@ void	cb_load_game(t_game *game, t_parse *data)
 {
 	cb_set_img_wall(game);
 	cb_load_img_wall(game, data);
-	cb_paint_floor_ceiling(game, data);
+	cb_get_int_color_fl_cel(game, data);
 }

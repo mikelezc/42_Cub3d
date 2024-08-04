@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d_bonus.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ampjimen <ampjimen@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mlezcano <mlezcano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 13:45:08 by ampjimen          #+#    #+#             */
-/*   Updated: 2024/08/03 11:33:59 by ampjimen         ###   ########.fr       */
+/*   Updated: 2024/08/04 17:42:38 by mlezcano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,7 @@ void	bonus_zbuffer_init(t_game *game);
 void	bonus_game_main(t_game *game, t_parse *data);
 
 /* bonus_load_game.c */
-void	bonus_paint_floor_ceiling(t_game *game, t_parse *data);
+void	bonus_get_int_color_fl_cel(t_game *game, t_parse *data);
 void	bonus_load_texture(t_game *game, int *texture, \
 		char *path, t_img *img);
 void	bonus_load_img_wall(t_game *game, t_parse *data);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ampjimen <ampjimen@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mlezcano <mlezcano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/03 09:14:30 by mlezcano          #+#    #+#             */
-/*   Updated: 2024/08/04 12:02:13 by ampjimen         ###   ########.fr       */
+/*   Updated: 2024/08/04 17:42:38 by mlezcano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,7 @@ void	cb_zbuffer_init(t_game *game);
 void	cb_game_main(t_game *game, t_parse *data);
 
 /* load_game.c */
-void	cb_paint_floor_ceiling(t_game *game, t_parse *data);
+void	cb_get_int_color_fl_cel(t_game *game, t_parse *data);
 void	cb_load_texture(t_game *game, int *texture, \
 		char *path, t_img *img);
 void	cb_load_img_wall(t_game *game, t_parse *data);
