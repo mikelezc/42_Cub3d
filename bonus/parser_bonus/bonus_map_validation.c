@@ -6,7 +6,7 @@
 /*   By: mlezcano <mlezcano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/07 17:54:58 by ampjimen          #+#    #+#             */
-/*   Updated: 2024/08/04 18:13:33 by mlezcano         ###   ########.fr       */
+/*   Updated: 2024/08/04 18:45:27 by mlezcano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ void	bonus_length_map(char *line, int fd, char *map_file, t_parse *data)
 {
 	size_t	line_length;
 
-	while (line != NULL && bonus_check_only_spaces(line) == true)
+	while (line != NULL && bonus_check_only_spaces(line))
 	{
 		free(line);
 		line = get_next_line(fd);

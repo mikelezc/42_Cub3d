@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parser_data.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ampjimen <ampjimen@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mlezcano <mlezcano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/03 18:00:31 by ampjimen          #+#    #+#             */
-/*   Updated: 2024/08/03 11:34:06 by ampjimen         ###   ########.fr       */
+/*   Updated: 2024/08/04 18:32:12 by mlezcano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	cb_check_argv_cub(char *argv, t_parse *data, t_game *game)
 	len = ft_strlen(argv);
 	if (len > 4 && ft_strcmp(argv + len - 4, ".cub") == 0)
 	{
-		if (cb_check_read_map(argv, data, game) == false)
+		if (!cb_check_read_map(argv, data, game))
 			return (false);
 	}
 	else

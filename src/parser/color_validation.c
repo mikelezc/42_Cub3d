@@ -6,7 +6,7 @@
 /*   By: mlezcano <mlezcano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/03 18:39:05 by ampjimen          #+#    #+#             */
-/*   Updated: 2024/07/10 17:03:36 by mlezcano         ###   ########.fr       */
+/*   Updated: 2024/08/04 18:40:56 by mlezcano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	cb_check_and_save_color(char *line, t_parse *data)
 {
 	char	**rgb;
 
-	if (ft_commacount(line) == false || cb_check_invalid_rgb_chars(line)
+	if (!ft_commacount(line) || cb_check_invalid_rgb_chars(line)
 		|| cb_check_duplicate_rgb(line))
 		return (false);
 	if (line[0] == 'F' || line[0] == 'C')

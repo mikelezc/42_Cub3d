@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   bonus_color_validation.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ampjimen <ampjimen@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mlezcano <mlezcano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/03 18:39:05 by ampjimen          #+#    #+#             */
-/*   Updated: 2024/07/24 20:31:43 by ampjimen         ###   ########.fr       */
+/*   Updated: 2024/08/04 18:41:05 by mlezcano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	bonus_check_and_save_color(char *line, t_parse *data)
 {
 	char	**rgb;
 
-	if (ft_commacount(line) == false || bonus_check_invalid_rgb_chars(line)
+	if (!ft_commacount(line) || bonus_check_invalid_rgb_chars(line)
 		|| bonus_check_duplicate_rgb(line))
 		return (false);
 	if (line[0] == 'F' || line[0] == 'C')

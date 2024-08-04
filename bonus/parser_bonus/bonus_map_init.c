@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   bonus_map_init.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ampjimen <ampjimen@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mlezcano <mlezcano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/07 17:54:20 by ampjimen          #+#    #+#             */
-/*   Updated: 2024/07/22 20:14:47 by ampjimen         ###   ########.fr       */
+/*   Updated: 2024/08/04 18:37:21 by mlezcano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,13 +94,13 @@ void	bonus_get_player_pos(char **map, t_game *game)
 
 int	bonus_check_duplicate(char *line, t_parse *data)
 {
-	if (ft_strncmp(line, "NO ", 3) == 0 && ft_strcmp(data->no, "X") != false)
+	if (ft_strncmp(line, "NO ", 3) == 0 && ft_strcmp(data->no, "X") != 0)
 		return (bonus_error_exit("Error:\nDuplicate 'NO' parameter"), true);
-	if (ft_strncmp(line, "SO ", 3) == 0 && ft_strcmp(data->so, "X") != false)
+	if (ft_strncmp(line, "SO ", 3) == 0 && ft_strcmp(data->so, "X") != 0)
 		return (bonus_error_exit("Error:\nDuplicate 'SO' parameter"), true);
-	if (ft_strncmp(line, "WE ", 3) == 0 && ft_strcmp(data->we, "X") != false)
+	if (ft_strncmp(line, "WE ", 3) == 0 && ft_strcmp(data->we, "X") != 0)
 		return (bonus_error_exit("Error:\nDuplicate 'WE' parameter"), true);
-	if (ft_strncmp(line, "EA ", 3) == 0 && ft_strcmp(data->ea, "X") != false)
+	if (ft_strncmp(line, "EA ", 3) == 0 && ft_strcmp(data->ea, "X") != 0)
 		return (bonus_error_exit("Error:\nDuplicate 'EA' parameter"), true);
 	if (ft_strncmp(line, "F ", 2) == 0 && data->f_color[0] != -1)
 		return (bonus_error_exit("Error:\nDuplicate 'F' parameter"), true);
