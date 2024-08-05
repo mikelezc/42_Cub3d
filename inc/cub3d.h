@@ -6,7 +6,7 @@
 /*   By: mlezcano <mlezcano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/03 09:14:30 by mlezcano          #+#    #+#             */
-/*   Updated: 2024/08/04 18:13:33 by mlezcano         ###   ########.fr       */
+/*   Updated: 2024/08/05 08:37:05 by mlezcano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,6 +106,7 @@ void	cb_ray_trajectory(t_game *game, t_raycast *vars, int x);
 void	cb_raycasting(t_game *game);
 
 /* raycasting_utils.c */
+int		cb_hex_to_int(const char *hex_str);
 void	cb_render_3d_walls(t_game *game, t_raycast *vars);
 
 /* cam_movements.c */

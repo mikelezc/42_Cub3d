@@ -6,7 +6,7 @@
 /*   By: mlezcano <mlezcano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/04 10:31:47 by mlezcano          #+#    #+#             */
-/*   Updated: 2024/08/05 08:12:37 by mlezcano         ###   ########.fr       */
+/*   Updated: 2024/08/05 08:37:59 by mlezcano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	cb_fill_zbuffer(t_game *game, t_raycast *vars, int x, int y)
 		vars->tex_num = 1;
 	color = game->texture[vars->tex_num][TEXHEIGHT * tex_y + vars->tex_x];
 	if (vars->side == 1)
-		color = (color >> 1) & DARKNESS;
+		color = (color >> 1) & cb_hex_to_int(DARKNESS);
 	game->zbuffer[y][W_WIDTH - x - 1] = color;
 }
 
