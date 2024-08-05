@@ -6,38 +6,27 @@
 /*   By: mlezcano <mlezcano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/24 10:09:53 by mlezcano          #+#    #+#             */
-/*   Updated: 2024/08/05 08:35:08 by mlezcano         ###   ########.fr       */
+/*   Updated: 2024/08/05 10:20:44 by mlezcano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d_bonus.h"
 
-int	bonus_hex_to_int(const char *hex_str)
+int	bonus_calculate_color(int color, double distance)
 {
-	int		result;
-	int		i;
-	int		value;
-	char	c;
+	double	brightness;
+	int		red;
+	int		green;
+	int		blue;
 
-	result = 0;
-	i = 0;
-	if (hex_str[0] == '0' && hex_str[1] == 'x')
-		i = 2;
-	while (hex_str[i] != '\0')
-	{
-		c = hex_str[i];
-		if (c >= '0' && c <= '9')
-			value = c - '0';
-		else if (c >= 'a' && c <= 'f')
-			value = c - 'a' + 10;
-		else if (c >= 'A' && c <= 'F')
-			value = c - 'A' + 10;
-		else
-			break ;
-		result = result * 16 + value;
-		i++;
-	}
-	return (result);
+	brightness = fmax(0.1, 2.0 - 0.1 * (distance * 2.5));
+	red = (color >> 16) & 0xFF;
+	green = (color >> 8) & 0xFF;
+	blue = color & 0xFF;
+	red = fmin(255, (int)(red * brightness));
+	green = fmin(255, (int)(green * brightness));
+	blue = fmin(255, (int)(blue * brightness));
+	return ((red << 16) | (green << 8) | blue);
 }
 
 void	bonus_apply_door_texture(t_game *game, t_raycast *vars, int x, int y)

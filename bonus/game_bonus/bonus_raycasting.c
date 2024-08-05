@@ -6,7 +6,7 @@
 /*   By: mlezcano <mlezcano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/04 10:31:47 by mlezcano          #+#    #+#             */
-/*   Updated: 2024/08/05 08:35:08 by mlezcano         ###   ########.fr       */
+/*   Updated: 2024/08/05 10:15:12 by mlezcano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,9 @@
 
 void	bonus_fill_zbuffer(t_game *game, t_raycast *vars, int x, int y)
 {
-	int	color;
-	int	tex_y;
+	int		color;
+	int		tex_y;
+	double	distance;
 
 	tex_y = (int)vars->tex_pos & (TEXHEIGHT - 1);
 	vars->tex_pos += vars->step;
@@ -27,8 +28,9 @@ void	bonus_fill_zbuffer(t_game *game, t_raycast *vars, int x, int y)
 	else if (vars->side == 1 && vars->ray_dir_y > 0)
 		vars->tex_num = 1;
 	color = game->texture[vars->tex_num][TEXHEIGHT * tex_y + vars->tex_x];
-	if (vars->side == 1)
-		color = (color >> 1) & bonus_hex_to_int(DARKNESS);
+	distance = sqrt(pow(vars->map_x - game->player.pos_x, 2) + \
+	pow(vars->map_y - game->player.pos_y, 2));
+	color = bonus_calculate_color(color, distance);
 	game->zbuffer[y][W_WIDTH - x - 1] = color;
 }
 
