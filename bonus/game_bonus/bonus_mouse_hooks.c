@@ -6,7 +6,7 @@
 /*   By: mlezcano <mlezcano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/07 08:49:39 by mlezcano          #+#    #+#             */
-/*   Updated: 2024/07/28 16:34:32 by mlezcano         ###   ########.fr       */
+/*   Updated: 2024/08/05 15:33:15 by mlezcano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	bonus_mouse_click(int button, int x, int y, t_game *game)
 {
 	if (button == 1 && y > 10 && x > 0)
 	{
-		game->click = 2;
+		game->weapon.click = 2;
 		bonus_handle_door_interact(game, 0);
 	}
 	return (0);

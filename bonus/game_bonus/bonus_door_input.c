@@ -6,7 +6,7 @@
 /*   By: mlezcano <mlezcano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/23 19:21:12 by ampjimen          #+#    #+#             */
-/*   Updated: 2024/07/29 07:36:44 by mlezcano         ###   ########.fr       */
+/*   Updated: 2024/08/05 15:30:54 by mlezcano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void	bonus_door_input(t_game *game)
 
 	if (game->keys.key_space)
 	{
-		game->click = 2;
+		game->weapon.click = 2;
 		params.player_map_x = (int)game->player.pos_x;
 		params.player_map_y = (int)game->player.pos_y;
 		bonus_calculate_door_position(game, &params);

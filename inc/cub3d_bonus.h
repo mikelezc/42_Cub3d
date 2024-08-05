@@ -6,7 +6,7 @@
 /*   By: mlezcano <mlezcano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 13:45:08 by ampjimen          #+#    #+#             */
-/*   Updated: 2024/08/05 14:49:10 by mlezcano         ###   ########.fr       */
+/*   Updated: 2024/08/05 15:41:18 by mlezcano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -138,7 +138,7 @@ int		bonus_mouse_move(int x, int y, t_game *game);
 
 /* bonus_weapon.c */
 void	bonus_snprintf(char *buffer, size_t size, char *format, int index);
-void	bonus_render_weapon(t_game *game);
+void	bonus_render_weapon(t_weapon *weapon, t_game *game);
 void	bonus_load_weapon_animation(t_game *game);
 void	bonus_load_main_weapon(t_game *game);
 void	bonus_load_img_weapon(t_game *game);

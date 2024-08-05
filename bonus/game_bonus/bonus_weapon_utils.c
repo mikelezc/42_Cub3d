@@ -6,7 +6,7 @@
 /*   By: mlezcano <mlezcano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/12 10:12:32 by mlezcano          #+#    #+#             */
-/*   Updated: 2024/07/28 19:22:47 by mlezcano         ###   ########.fr       */
+/*   Updated: 2024/08/05 15:34:18 by mlezcano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,8 @@ void	bonus_load_img_crack(t_game *game)
 	t_img	img;
 
 	img = bonus_load_image(game->mlx, "./textures/crack.xpm");
-	game->crack_img = img;
-	game->crack_bg_color = img.bg_color;
+	game->weapon.crack_img = img;
+	game->weapon.crack_bg_color = img.bg_color;
 }
 
 void	bonus_draw_image(void *mlx, void *win, const t_img *params)
@@ -66,9 +66,9 @@ void	bonus_draw_crack_frame(t_game *game)
 	int	y;
 	int	x;
 
-	x = (W_WIDTH - game->crack_img.img_width) / 2;
-	y = (W_HEIGHT - game->crack_img.img_height) / 2;
-	game->crack_img.x = x;
-	game->crack_img.y = y;
-	bonus_draw_image(game->mlx, game->win, &game->crack_img);
+	x = (W_WIDTH - game->weapon.crack_img.img_width) / 2;
+	y = (W_HEIGHT - game->weapon.crack_img.img_height) / 2;
+	game->weapon.crack_img.x = x;
+	game->weapon.crack_img.y = y;
+	bonus_draw_image(game->mlx, game->win, &game->weapon.crack_img);
 }

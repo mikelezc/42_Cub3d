@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   bonus_exit_n_frees.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ampjimen <ampjimen@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mlezcano <mlezcano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/03 19:01:18 by mlezcano          #+#    #+#             */
-/*   Updated: 2024/07/22 19:50:05 by ampjimen         ###   ########.fr       */
+/*   Updated: 2024/08/05 15:31:47 by mlezcano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,12 +41,12 @@ void	bonus_free_weapon_imgs(t_game *game)
 
 	i = -1;
 	while (++i < 4)
-		mlx_destroy_image(game->mlx, game->weapon_imgs[i].img);
+		mlx_destroy_image(game->mlx, game->weapon.weapon_imgs[i].img);
 }
 
 int	bonus_exit(t_game *game)
 {
-	if (game->weapon_imgs)
+	if (game->weapon.weapon_imgs)
 		bonus_free_weapon_imgs(game);
 	if (game->map.map)
 		bonus_free_array((void **)game->map.map);

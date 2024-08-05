@@ -6,7 +6,7 @@
 /*   By: mlezcano <mlezcano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/03 19:01:18 by mlezcano          #+#    #+#             */
-/*   Updated: 2024/07/21 06:51:52 by mlezcano         ###   ########.fr       */
+/*   Updated: 2024/08/05 15:50:26 by mlezcano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,15 +33,6 @@ void	cb_free_textures(int **arr)
 	i = -1;
 	while (arr[++i] != NULL)
 		free(arr[i]);
-}
-
-void	cb_free_weapon_imgs(t_game *game)
-{
-	int	i;
-
-	i = -1;
-	while (++i < 4)
-		mlx_destroy_image(game->mlx, game->weapon_imgs[i].img);
 }
 
 int	cb_exit(t_game *game)

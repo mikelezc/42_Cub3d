@@ -6,7 +6,7 @@
 /*   By: mlezcano <mlezcano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 02:29:28 by ampjimen          #+#    #+#             */
-/*   Updated: 2024/08/05 15:10:32 by mlezcano         ###   ########.fr       */
+/*   Updated: 2024/08/05 15:47:40 by mlezcano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,35 @@ typedef struct s_img
 	int			img_height;
 }				t_img;
 
+typedef struct s_door_params
+{
+	int			player_map_x;
+	int			player_map_y;
+	int			door_x;
+	int			door_y;
+	int			dir_x;
+	int			dir_y;
+}				t_door_params;
+
+typedef struct s_weapon
+{
+	t_img		weapon_img;
+	t_img		weapon_imgs[4];
+	t_img		crack_img;
+	int			weapon_x;
+	int			weapon_y;
+	int			current_sprite;
+	int			frame_count;
+	int			crack_bg_color;
+	int			click;
+}				t_weapon;
+
 typedef struct s_map
 {
 	char		**map;
 	int			floor_color;
 	int			ceil_color;
+	int			minimap_on;
 }				t_map;
 
 typedef struct s_player
@@ -58,31 +82,6 @@ typedef struct s_keys
 	int			key_space;
 }				t_keys;
 
-typedef struct s_game
-{
-	void		*mlx;
-	void		*win;
-	t_keys		keys;
-	t_img		img;
-	t_player	player;
-	t_map		map;
-	int			minimap_on;
-	int			help_on;
-	t_img		help;
-	int			click;
-	t_img		weapon_img;
-	t_img		weapon_imgs[4];
-	t_img		crack_img;
-	int			weapon_x;
-	int			weapon_y;
-	int			current_sprite;
-	int			frame_count;
-	int			crack_bg_color;
-	int			**zbuffer;
-	int			**texture;
-}				t_game;
-
-//raycasting struct
 typedef struct t_raycast
 {
 	double		camera_x;
@@ -109,6 +108,21 @@ typedef struct t_raycast
 	double		tex_pos;
 }				t_raycast;
 
+typedef struct s_game
+{
+	void		*mlx;
+	void		*win;
+	int			help_on;
+	int			**zbuffer;
+	int			**texture;
+	t_keys		keys;
+	t_img		img;
+	t_player	player;
+	t_map		map;
+	t_img		help;
+	t_weapon	weapon;
+}				t_game;
+
 typedef struct s_parse
 {
 	int			reading_pos;
@@ -123,15 +137,5 @@ typedef struct s_parse
 	size_t		line_size;
 	char		**raw_map;
 }				t_parse;
-
-typedef struct s_door_params
-{
-	int			player_map_x;
-	int			player_map_y;
-	int			door_x;
-	int			door_y;
-	int			dir_x;
-	int			dir_y;
-}				t_door_params;
 
 #endif

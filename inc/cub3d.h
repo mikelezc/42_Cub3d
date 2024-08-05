@@ -6,7 +6,7 @@
 /*   By: mlezcano <mlezcano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/03 09:14:30 by mlezcano          #+#    #+#             */
-/*   Updated: 2024/08/05 08:37:05 by mlezcano         ###   ########.fr       */
+/*   Updated: 2024/08/05 15:50:32 by mlezcano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -122,7 +122,6 @@ int		cb_key_on(int key, t_game *game);
 /* exit_n_frees */
 void	cb_free_array(void **arr);
 void	cb_free_textures(int **array);
-void	cb_free_weapon_imgs(t_game *game);
 int		cb_exit(t_game *game);
 void	cb_error_exit(char *msg);
 

@@ -6,7 +6,7 @@
 /*   By: mlezcano <mlezcano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/07 09:51:15 by mlezcano          #+#    #+#             */
-/*   Updated: 2024/08/05 14:47:44 by mlezcano         ###   ########.fr       */
+/*   Updated: 2024/08/05 15:43:20 by mlezcano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,30 +35,30 @@ void	bonus_snprintf(char *buffer, size_t size, char *format, int index)
 	}
 }
 
-void	bonus_render_weapon(t_game *game)
+void	bonus_render_weapon(t_weapon *weapon, t_game *game)
 {
-	if (game->click != 2)
+	if (weapon->click != 2)
 	{
-		game->weapon_img.x = game->weapon_x;
-		game->weapon_img.y = game->weapon_y;
-		bonus_draw_image(game->mlx, game->win, &game->weapon_img);
+		weapon->weapon_img.x = weapon->weapon_x;
+		weapon->weapon_img.y = weapon->weapon_y;
+		bonus_draw_image(game->mlx, game->win, &weapon->weapon_img);
 	}
-	else if (game->click == 2)
+	else if (weapon->click == 2)
 	{
 		bonus_draw_crack_frame(game);
-		game->weapon_imgs[game->current_sprite].x = game->weapon_x;
-		game->weapon_imgs[game->current_sprite].y = game->weapon_y;
+		weapon->weapon_imgs[weapon->current_sprite].x = weapon->weapon_x;
+		weapon->weapon_imgs[weapon->current_sprite].y = weapon->weapon_y;
 		bonus_draw_image(game->mlx, game->win, \
-		&game->weapon_imgs[game->current_sprite]);
-		game->frame_count++;
-		if (game->frame_count >= 20)
+		&weapon->weapon_imgs[weapon->current_sprite]);
+		weapon->frame_count++;
+		if (weapon->frame_count >= 20)
 		{
-			game->current_sprite++;
-			game->frame_count = 0;
-			if (game->current_sprite >= 4)
+			weapon->current_sprite++;
+			weapon->frame_count = 0;
+			if (weapon->current_sprite >= 4)
 			{
-				game->current_sprite = 0;
-				game->click = 0;
+				weapon->current_sprite = 0;
+				weapon->click = 0;
 			}
 		}
 	}
@@ -74,23 +74,23 @@ void	bonus_load_weapon_animation(t_game *game)
 	{
 		bonus_snprintf(sprite_path, sizeof(sprite_path), \
 		"./textures/hand/handsprite%d.xpm", i + 1);
-		game->weapon_imgs[i] = bonus_load_image(game->mlx, sprite_path);
+		game->weapon.weapon_imgs[i] = bonus_load_image(game->mlx, sprite_path);
 	}
-	game->current_sprite = 0;
-	game->frame_count = 0;
+	game->weapon.current_sprite = 0;
+	game->weapon.frame_count = 0;
 }
 
 void	bonus_load_main_weapon(t_game *game)
 {
-	game->weapon_img = bonus_load_image(game->mlx, \
+	game->weapon.weapon_img = bonus_load_image(game->mlx, \
 	"./textures/hand/handsprite.xpm");
-	game->weapon_x = (W_WIDTH - game->weapon_img.img_width) / 2;
-	game->weapon_y = W_HEIGHT - game->weapon_img.img_height + 10;
+	game->weapon.weapon_x = (W_WIDTH - game->weapon.weapon_img.img_width) / 2;
+	game->weapon.weapon_y = W_HEIGHT - game->weapon.weapon_img.img_height + 10;
 }
 
 void	bonus_load_img_weapon(t_game *game)
 {
 	bonus_load_main_weapon(game);
 	bonus_load_weapon_animation(game);
-	game->click = 0;
+	game->weapon.click = 0;
 }

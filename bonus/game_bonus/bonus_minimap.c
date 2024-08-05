@@ -6,7 +6,7 @@
 /*   By: mlezcano <mlezcano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/04 11:00:20 by mlezcano          #+#    #+#             */
-/*   Updated: 2024/08/05 14:52:54 by mlezcano         ###   ########.fr       */
+/*   Updated: 2024/08/05 15:32:58 by mlezcano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,10 +85,10 @@ void	bonus_minimap(t_game *game)
 {
 	if (game->keys.key_m)
 	{
-		game->minimap_on = !game->minimap_on;
+		game->map.minimap_on = !game->map.minimap_on;
 		game->keys.key_m = 0;
 	}
-	if (game->minimap_on)
+	if (game->map.minimap_on)
 	{
 		bonus_put_minimap(game);
 		bonus_draw_rays(game);

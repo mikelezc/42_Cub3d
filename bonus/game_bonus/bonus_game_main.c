@@ -6,7 +6,7 @@
 /*   By: mlezcano <mlezcano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/03 11:29:10 by mlezcano          #+#    #+#             */
-/*   Updated: 2024/07/29 07:01:34 by mlezcano         ###   ########.fr       */
+/*   Updated: 2024/08/05 15:41:58 by mlezcano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ int	bonus_game_loop(t_game *game)
 	bonus_door_input(game);
 	bonus_image_to_window(game);
 	bonus_cam_movements(game);
-	bonus_render_weapon(game);
+	bonus_render_weapon(&game->weapon, game);
 	bonus_helper(game);
 	mlx_do_sync(game->mlx);
 	return (0);
