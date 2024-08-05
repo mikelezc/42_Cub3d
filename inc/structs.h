@@ -6,7 +6,7 @@
 /*   By: mlezcano <mlezcano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 02:29:28 by ampjimen          #+#    #+#             */
-/*   Updated: 2024/08/04 17:50:36 by mlezcano         ###   ########.fr       */
+/*   Updated: 2024/08/05 15:10:32 by mlezcano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,13 +32,6 @@ typedef struct s_map
 	char		**map;
 	int			floor_color;
 	int			ceil_color;
-	void		*n_wall;
-	void		*s_wall;
-	t_img		e_wall;
-	t_img		w_wall;
-	int			door_state;
-	int			**visited;
-	int			**door_open;
 }				t_map;
 
 typedef struct s_player
