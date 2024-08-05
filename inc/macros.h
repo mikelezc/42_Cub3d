@@ -6,7 +6,7 @@
 /*   By: mlezcano <mlezcano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 11:51:59 by mlezcano          #+#    #+#             */
-/*   Updated: 2024/08/05 14:52:17 by mlezcano         ###   ########.fr       */
+/*   Updated: 2024/08/05 15:20:41 by mlezcano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,6 @@
 /* Define the width and height of the window */
 # define W_WIDTH 			800
 # define W_HEIGHT			600
-
-/* Define player movement */
-# define PLAYER_SPEED		0.05
-# define ROTATION_SPEED		0.05
-
-/* Define the amount of frames per second */
-# define FPS_LIMIT			60
 
 /* Define the amount of darkness of the walls */
 # define DARKNESS			"0x7F7F7F"
@@ -51,19 +44,13 @@
 /* Define mouse sensitivity */
 # define MOUSE_SENSITIVITY	0.00055
 
-/* Math constants */
-# ifndef M_PI
-#  define M_PI				3.14159265358979323846
-# endif
-
 /* Define cam speed */
 # define MOVE_SPEED			0.04
 # define ROT_SPEED			0.03
-# define FOV_ANGLE 			60.0
 
 /* Minimap */
-# define MINIMAP_SCALE		10
 # define PLAYER_SIZE		5
+# define MINIMAP_SCALE		10
 # define PLAYER_COLOR		0x0000FF
 # define WALL_COLOR			0xFFFFFF
 # define SPACE_COLOR		0x000000
@@ -75,10 +62,6 @@
 # define FRNT_MARGIN 		0.5
 # define SIDE_MARGIN 		0.25
 # define BACK_MARGIN 		0.25
-
-/* Define the width and height of "CRACK!" characters*/
-# define CHAR_WIDTH 		12
-# define CHAR_HEIGHT		12
 
 /*door texture*/
 # define DOOR_TEXTURE		4
