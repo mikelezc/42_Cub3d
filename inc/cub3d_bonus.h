@@ -6,7 +6,7 @@
 /*   By: mlezcano <mlezcano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 13:45:08 by ampjimen          #+#    #+#             */
-/*   Updated: 2024/08/04 18:13:33 by mlezcano         ###   ########.fr       */
+/*   Updated: 2024/08/05 08:35:08 by mlezcano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,6 +106,7 @@ void	bonus_ray_trajectory(t_game *game, t_raycast *vars, int x);
 void	bonus_raycasting(t_game *game);
 
 /* bonus_raycasting_utils.c */
+int		bonus_hex_to_int(const char *hex_str);
 void	bonus_apply_door_texture(t_game *game, t_raycast *vars, int x, int y);
 void	calculate_wall_and_texture_params(t_game *game, t_raycast *vars);
 void	calculate_basic_raycast_params(t_game *game, t_raycast *vars);

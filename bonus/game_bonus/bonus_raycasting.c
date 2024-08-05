@@ -6,7 +6,7 @@
 /*   By: mlezcano <mlezcano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/04 10:31:47 by mlezcano          #+#    #+#             */
-/*   Updated: 2024/07/29 09:05:25 by mlezcano         ###   ########.fr       */
+/*   Updated: 2024/08/05 08:35:08 by mlezcano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	bonus_fill_zbuffer(t_game *game, t_raycast *vars, int x, int y)
 		vars->tex_num = 1;
 	color = game->texture[vars->tex_num][TEXHEIGHT * tex_y + vars->tex_x];
 	if (vars->side == 1)
-		color = (color >> 1) & 8355711;
+		color = (color >> 1) & bonus_hex_to_int(DARKNESS);
 	game->zbuffer[y][W_WIDTH - x - 1] = color;
 }
 

@@ -6,11 +6,39 @@
 /*   By: mlezcano <mlezcano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/24 10:09:53 by mlezcano          #+#    #+#             */
-/*   Updated: 2024/07/29 07:57:23 by mlezcano         ###   ########.fr       */
+/*   Updated: 2024/08/05 08:35:08 by mlezcano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d_bonus.h"
+
+int	bonus_hex_to_int(const char *hex_str)
+{
+	int		result;
+	int		i;
+	int		value;
+	char	c;
+
+	result = 0;
+	i = 0;
+	if (hex_str[0] == '0' && hex_str[1] == 'x')
+		i = 2;
+	while (hex_str[i] != '\0')
+	{
+		c = hex_str[i];
+		if (c >= '0' && c <= '9')
+			value = c - '0';
+		else if (c >= 'a' && c <= 'f')
+			value = c - 'a' + 10;
+		else if (c >= 'A' && c <= 'F')
+			value = c - 'A' + 10;
+		else
+			break ;
+		result = result * 16 + value;
+		i++;
+	}
+	return (result);
+}
 
 void	bonus_apply_door_texture(t_game *game, t_raycast *vars, int x, int y)
 {
