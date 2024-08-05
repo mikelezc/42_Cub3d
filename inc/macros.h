@@ -6,7 +6,7 @@
 /*   By: mlezcano <mlezcano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 11:51:59 by mlezcano          #+#    #+#             */
-/*   Updated: 2024/08/05 08:41:03 by mlezcano         ###   ########.fr       */
+/*   Updated: 2024/08/05 14:52:17 by mlezcano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,8 @@
 # define MINIMAP_SCALE		10
 # define PLAYER_SIZE		5
 # define PLAYER_COLOR		0x0000FF
-# define SPACE_COLOR		0xFFFFFF
+# define WALL_COLOR			0xFFFFFF
+# define SPACE_COLOR		0x000000
 # define DOOR_COLOR_C       0xFF0000
 # define DOOR_COLOR_O       0x00FF00
 # define RAY_COLOR			0xA37BF8

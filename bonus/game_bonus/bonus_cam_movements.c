@@ -6,7 +6,7 @@
 /*   By: mlezcano <mlezcano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/04 12:10:11 by mlezcano          #+#    #+#             */
-/*   Updated: 2024/07/29 08:49:12 by mlezcano         ###   ########.fr       */
+/*   Updated: 2024/08/05 14:55:55 by mlezcano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,10 +101,10 @@ void	bonus_frwr_back_cam(t_game *game, t_player *p)
 
 void	bonus_cam_movements(t_game *game)
 {
-	t_player	*p;
+	t_player	*plyr;
 
-	p = &game->player;
-	bonus_frwr_back_cam(game, p);
-	bonus_side_mov_cam(game, p);
-	bonus_rotate_cam(game, p);
+	plyr = &game->player;
+	bonus_frwr_back_cam(game, plyr);
+	bonus_side_mov_cam(game, plyr);
+	bonus_rotate_cam(game, plyr);
 }

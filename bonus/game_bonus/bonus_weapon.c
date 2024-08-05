@@ -6,7 +6,7 @@
 /*   By: mlezcano <mlezcano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/07 09:51:15 by mlezcano          #+#    #+#             */
-/*   Updated: 2024/07/28 19:03:09 by mlezcano         ###   ########.fr       */
+/*   Updated: 2024/08/05 14:47:44 by mlezcano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,30 +33,6 @@ void	bonus_snprintf(char *buffer, size_t size, char *format, int index)
 			ft_strlcpy(buffer + prefix_len + 1, suffix, size - prefix_len - 1);
 		}
 	}
-}
-
-void	bonus_load_main_weapon(t_game *game)
-{
-	game->weapon_img = bonus_load_image(game->mlx, \
-	"./textures/hand/handsprite.xpm");
-	game->weapon_x = (W_WIDTH - game->weapon_img.img_width) / 2;
-	game->weapon_y = W_HEIGHT - game->weapon_img.img_height + 10;
-}
-
-void	bonus_load_weapon_animation(t_game *game)
-{
-	char	sprite_path[50];
-	int		i;
-
-	i = -1;
-	while (++i < 4)
-	{
-		bonus_snprintf(sprite_path, sizeof(sprite_path), \
-		"./textures/hand/handsprite%d.xpm", i + 1);
-		game->weapon_imgs[i] = bonus_load_image(game->mlx, sprite_path);
-	}
-	game->current_sprite = 0;
-	game->frame_count = 0;
 }
 
 void	bonus_render_weapon(t_game *game)
@@ -86,6 +62,30 @@ void	bonus_render_weapon(t_game *game)
 			}
 		}
 	}
+}
+
+void	bonus_load_weapon_animation(t_game *game)
+{
+	char	sprite_path[50];
+	int		i;
+
+	i = -1;
+	while (++i < 4)
+	{
+		bonus_snprintf(sprite_path, sizeof(sprite_path), \
+		"./textures/hand/handsprite%d.xpm", i + 1);
+		game->weapon_imgs[i] = bonus_load_image(game->mlx, sprite_path);
+	}
+	game->current_sprite = 0;
+	game->frame_count = 0;
+}
+
+void	bonus_load_main_weapon(t_game *game)
+{
+	game->weapon_img = bonus_load_image(game->mlx, \
+	"./textures/hand/handsprite.xpm");
+	game->weapon_x = (W_WIDTH - game->weapon_img.img_width) / 2;
+	game->weapon_y = W_HEIGHT - game->weapon_img.img_height + 10;
 }
 
 void	bonus_load_img_weapon(t_game *game)
