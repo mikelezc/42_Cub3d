@@ -1,7 +1,7 @@
-NO ./textures/trial_images/trial4.xpm
-SO ./textures/trial_images/trial3.xpm
-WE ./textures/trial_images/trial2.xpm   
-EA ./textures/trial_images/trial1.xpm
+NO ./textures/trial_images/stone_blue.xpm
+SO ./textures/trial_images/stone_purple.xpm
+WE ./textures/trial_images/stone_white.xpm   
+EA ./textures/trial_images/stone_w_b.xpm
 
 F 20,20,20
 C 22,0,44
