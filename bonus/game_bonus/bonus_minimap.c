@@ -6,7 +6,7 @@
 /*   By: mlezcano <mlezcano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/04 11:00:20 by mlezcano          #+#    #+#             */
-/*   Updated: 2024/08/05 15:32:58 by mlezcano         ###   ########.fr       */
+/*   Updated: 2024/08/06 06:57:36 by mlezcano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ void	bonus_put_minimap(t_game *game)
 				color = DOOR_COLOR_C;
 			else if (game->map.map[y][x] == 'd')
 				color = DOOR_COLOR_O;
-			else if (ft_strchr("NESW0", game->map.map[y][x]))
+			else if (ft_strchr("NSEW0", game->map.map[y][x]))
 				color = WALL_COLOR;
 			bonus_fill_minimap(game, color, x, y);
 			x++;

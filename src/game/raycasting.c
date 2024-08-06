@@ -6,7 +6,7 @@
 /*   By: mlezcano <mlezcano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/04 10:31:47 by mlezcano          #+#    #+#             */
-/*   Updated: 2024/08/06 06:54:00 by mlezcano         ###   ########.fr       */
+/*   Updated: 2024/08/06 06:57:36 by mlezcano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ void	cb_dda(t_game *game, t_raycast *vars)
 			vars->map_y += vars->step_y;
 			vars->side = 1;
 		}
-		if (ft_strchr("NESW0", game->map.map[vars->map_y][vars->map_x]) == NULL)
+		if (ft_strchr("NSEW0", game->map.map[vars->map_y][vars->map_x]) == NULL)
 			vars->hit = 1;
 	}
 }

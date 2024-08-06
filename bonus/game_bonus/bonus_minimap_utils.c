@@ -6,7 +6,7 @@
 /*   By: mlezcano <mlezcano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/04 12:29:26 by mlezcano          #+#    #+#             */
-/*   Updated: 2024/08/06 06:53:55 by mlezcano         ###   ########.fr       */
+/*   Updated: 2024/08/06 06:57:36 by mlezcano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	bonus_draw_ray_on_minimap(t_game *game, t_raycast *vars, \
 		if (x < 0 || x >= map_width * MINIMAP_SCALE || \
 		y < 0 || y >= map_height * MINIMAP_SCALE)
 			break ;
-		if (ft_strchr("NESW0", \
+		if (ft_strchr("NSEW0", \
 		game->map.map[(int)ray_pos_y][(int)ray_pos_x]) == NULL)
 			break ;
 		game->zbuffer[y][x] = RAY_COLOR;

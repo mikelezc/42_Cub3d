@@ -6,7 +6,7 @@
 /*   By: mlezcano <mlezcano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/04 12:10:11 by mlezcano          #+#    #+#             */
-/*   Updated: 2024/08/05 07:54:31 by mlezcano         ###   ########.fr       */
+/*   Updated: 2024/08/06 06:57:36 by mlezcano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,19 +43,19 @@ void	cb_side_mov_cam(t_game *game, t_player *p)
 	map = game->map.map;
 	if (game->keys.key_d)
 	{
-		if (ft_strchr("NESW0", map[(int)(p->pos_y + p->dir_x * \
+		if (ft_strchr("NSEW0", map[(int)(p->pos_y + p->dir_x * \
 		(speed + SIDE_MARGIN))][(int)(p->pos_x)]) != NULL)
 			p->pos_y += p->dir_x * speed;
-		if (ft_strchr("NESW0", map[(int)(p->pos_y)][(int)(p->pos_x - p->dir_y * \
+		if (ft_strchr("NSEW0", map[(int)(p->pos_y)][(int)(p->pos_x - p->dir_y * \
 		(speed + SIDE_MARGIN))]) != NULL)
 			p->pos_x -= p->dir_y * speed;
 	}
 	if (game->keys.key_a)
 	{
-		if (ft_strchr("NESW0", map[(int)(p->pos_y - p->dir_x * \
+		if (ft_strchr("NSEW0", map[(int)(p->pos_y - p->dir_x * \
 		(speed + SIDE_MARGIN))][(int)(p->pos_x)]) != NULL)
 			p->pos_y -= p->dir_x * speed;
-		if (ft_strchr("NESW0", map[(int)(p->pos_y)][(int)(p->pos_x + p->dir_y * \
+		if (ft_strchr("NSEW0", map[(int)(p->pos_y)][(int)(p->pos_x + p->dir_y * \
 		(speed + SIDE_MARGIN))]) != NULL)
 			p->pos_x += p->dir_y * speed;
 	}
@@ -70,19 +70,19 @@ void	cb_frwr_back_cam(t_game *game, t_player *p)
 	map = game->map.map;
 	if (game->keys.key_w)
 	{
-		if (ft_strchr("NESW0", map[(int)(p->pos_y + p->dir_y * \
+		if (ft_strchr("NSEW0", map[(int)(p->pos_y + p->dir_y * \
 		(speed + FRNT_MARGIN))][(int)(p->pos_x)]) != NULL)
 			p->pos_y += p->dir_y * speed;
-		if (ft_strchr("NESW0", map[(int)(p->pos_y)][(int)(p->pos_x + p->dir_x * \
+		if (ft_strchr("NSEW0", map[(int)(p->pos_y)][(int)(p->pos_x + p->dir_x * \
 		(speed + FRNT_MARGIN))]) != NULL)
 			p->pos_x += p->dir_x * speed;
 	}
 	if (game->keys.key_s)
 	{
-		if (ft_strchr("NESW0", map[(int)(p->pos_y - p->dir_y * \
+		if (ft_strchr("NSEW0", map[(int)(p->pos_y - p->dir_y * \
 		(speed + BACK_MARGIN))][(int)(p->pos_x)]) != NULL)
 			p->pos_y -= p->dir_y * speed;
-		if (ft_strchr("NESW0", map[(int)(p->pos_y)][(int)(p->pos_x - p->dir_x * \
+		if (ft_strchr("NSEW0", map[(int)(p->pos_y)][(int)(p->pos_x - p->dir_x * \
 		(speed + BACK_MARGIN))]) != NULL)
 			p->pos_x -= p->dir_x * speed;
 	}
