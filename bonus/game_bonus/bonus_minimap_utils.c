@@ -6,7 +6,7 @@
 /*   By: mlezcano <mlezcano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/04 12:29:26 by mlezcano          #+#    #+#             */
-/*   Updated: 2024/07/29 09:03:30 by mlezcano         ###   ########.fr       */
+/*   Updated: 2024/08/06 06:53:55 by mlezcano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ void	bonus_draw_rays(t_game *game)
 	while (x < W_WIDTH)
 	{
 		bonus_ray_trajectory(game, &vars, x);
-		bonus_check_ray_collision(game, &vars);
+		bonus_detect_wall(game, &vars);
 		bonus_dda(game, &vars);
 		bonus_draw_ray_on_minimap(game, &vars, map_width, map_height);
 		x++;

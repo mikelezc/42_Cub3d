@@ -6,7 +6,7 @@
 /*   By: mlezcano <mlezcano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/04 10:31:47 by mlezcano          #+#    #+#             */
-/*   Updated: 2024/08/05 10:15:12 by mlezcano         ###   ########.fr       */
+/*   Updated: 2024/08/06 06:53:55 by mlezcano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ void	bonus_dda(t_game *game, t_raycast *vars)
 	}
 }
 
-void	bonus_check_ray_collision(t_game *game, t_raycast *vars)
+void	bonus_detect_wall(t_game *game, t_raycast *vars)
 {
 	if (vars->ray_dir_x < 0)
 	{
@@ -109,7 +109,7 @@ void	bonus_raycasting(t_game *game)
 	while (x < W_WIDTH)
 	{
 		bonus_ray_trajectory(game, &vars, x);
-		bonus_check_ray_collision(game, &vars);
+		bonus_detect_wall(game, &vars);
 		bonus_dda(game, &vars);
 		bonus_render_3d_walls(game, &vars, x);
 		x++;

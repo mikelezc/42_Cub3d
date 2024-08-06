@@ -6,7 +6,7 @@
 /*   By: mlezcano <mlezcano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/03 09:14:30 by mlezcano          #+#    #+#             */
-/*   Updated: 2024/08/05 15:50:32 by mlezcano         ###   ########.fr       */
+/*   Updated: 2024/08/06 06:53:55 by mlezcano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,7 +101,7 @@ void	cb_load_game(t_game *game, t_parse *data);
 /* raycasting.c */
 void	cb_fill_zbuffer(t_game *game, t_raycast *vars, int x, int y);
 void	cb_dda(t_game *game, t_raycast *vars);
-void	cb_check_ray_collision(t_game *game, t_raycast *vars);
+void	cb_detect_wall(t_game *game, t_raycast *vars);
 void	cb_ray_trajectory(t_game *game, t_raycast *vars, int x);
 void	cb_raycasting(t_game *game);
 

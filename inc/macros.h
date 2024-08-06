@@ -6,7 +6,7 @@
 /*   By: mlezcano <mlezcano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 11:51:59 by mlezcano          #+#    #+#             */
-/*   Updated: 2024/08/05 15:20:41 by mlezcano         ###   ########.fr       */
+/*   Updated: 2024/08/05 16:49:25 by mlezcano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 # define W_WIDTH 			800
 # define W_HEIGHT			600
 
-/* Define the amount of darkness of the walls */
+/* Define darkness of the walls */
 # define DARKNESS			"0x7F7F7F"
 
 /* Definitions to xml hook */

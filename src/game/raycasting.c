@@ -6,7 +6,7 @@
 /*   By: mlezcano <mlezcano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/04 10:31:47 by mlezcano          #+#    #+#             */
-/*   Updated: 2024/08/05 08:37:59 by mlezcano         ###   ########.fr       */
+/*   Updated: 2024/08/06 06:54:00 by mlezcano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ void	cb_dda(t_game *game, t_raycast *vars)
 	}
 }
 
-void	cb_check_ray_collision(t_game *game, t_raycast *vars)
+void	cb_detect_wall(t_game *game, t_raycast *vars)
 {
 	if (vars->ray_dir_x < 0)
 	{
@@ -105,7 +105,7 @@ void	cb_raycasting(t_game *game)
 	while (x < W_WIDTH)
 	{
 		cb_ray_trajectory(game, &vars, x);
-		cb_check_ray_collision(game, &vars);
+		cb_detect_wall(game, &vars);
 		cb_dda(game, &vars);
 		cb_render_3d_walls(game, &vars);
 		y = vars.draw_start;
