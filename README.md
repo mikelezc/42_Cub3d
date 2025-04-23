@@ -106,3 +106,9 @@ C 225,30,0
 ## Acknowledgements
 - 42 School for the project specification
 - id Software for the inspiration (Wolfenstein 3D)
+
+## Authors
+
+- mlezcano - [GitHub Profile](https://github.com/mikelezc)
+- ampjimen - [GitHub Profile](https://github.com/Amparojd)
+  
