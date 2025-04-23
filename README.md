@@ -28,14 +28,13 @@ cub3D is a raycasting engine inspired by the legendary Wolfenstein 3D game, deve
 
 ## Installation
 
-# 1. Clone the repository
+### 1. Clone the repository
 
-# 2. Compile the basic version
+### 2. Compile the basic version
 ```bash
 make
 ```
-
-# Compile the bonus version with extended features
+### 3. Compile the bonus version with extended features
 ```bash
 make bonus
 ```
