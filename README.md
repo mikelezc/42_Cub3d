@@ -28,13 +28,15 @@ cub3D is a raycasting engine inspired by the legendary Wolfenstein 3D game, deve
 
 ## Installation
 
-```bash
-# Clone the repository
+# 1. Clone the repository
 
-# Compile the basic version
+# 2. Compile the basic version
+```bash
 make
+```
 
 # Compile the bonus version with extended features
+```bash
 make bonus
 ```
 
@@ -103,12 +105,6 @@ C 225,30,0
 - miniLibX graphic library
 - Mathematical concepts: raycasting, vector geometry, collision detection
 - Software design patterns for game development
-
-## License
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Authors
-- [Your Name](https://github.com/your-username)
 
 ## Acknowledgements
 - 42 School for the project specification
