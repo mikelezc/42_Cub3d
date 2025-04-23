@@ -26,15 +26,13 @@ cub3D is a raycasting engine inspired by the legendary Wolfenstein 3D game, deve
 - X11 library
 - OpenGL library
 
-## Installation
+## Compilation
 
-### 1. Clone the repository
-
-### 2. Compile the basic version
+### Compile the basic version
 ```bash
 make
 ```
-### 3. Compile the bonus version with extended features
+### Compile the bonus version with extended features
 ```bash
 make bonus
 ```
